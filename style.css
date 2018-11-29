@@ -1,0 +1,856 @@
+/*!
+
+987 Custom CSS
+
+
+Theme Name: JCS Memorial
+Theme URI: http://underscores.me/
+Author: Cam Stringfellow
+Author URI: http://underscores.me/
+Description: Custom theme using underscores for JCS Memorial
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: jcs-memorial
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+JCS Memorial is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+
+# THEME Specific 
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+	color: black;
+}
+
+a:visited {
+	/*color: purple;*/
+}
+
+a:hover, a:focus, a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	-webkit-clip-path: none;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+/*=============================================================*/
+/*=================== THEME SPECIFIC STYLES ===================*/
+/*=============================================================*/
+
+/* COLOR REFERENCES 
+PURPLE: #a700d8
+
+*/
+
+/* Menu Items Spacing */
+.page_item {
+    margin-right: 10px;
+}
+
+.page_item a {
+    color: black;
+}
+
+#content-center {
+    text-align: center;
+}
+
+/* == GENERAL == */
+
+body {
+    font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+    font-size: 16px;
+    background: url('/wp-content/themes/underscores/assets/img/tile.jpg') top left repeat;
+}
+
+.logged-in .fixed-top {
+    top: 32px;
+}
+
+/* GLOBAL */
+
+h1,h2,h3,h4,h5,h6 {
+    text-rendering: optimizeLegibility;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h1,h2 {
+    margin: 0 0 40px;
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+p.lead {
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #9000ba; 
+}
+
+button, input, .btn, a.btn {
+    text-rendering: optimizeLegibility;
+    color: white;
+    background-color: #a700d8;
+    border: #a700d8;
+}
+
+form input {
+    background-color: transparent;
+}
+
+#paypal {
+    color: #053385;
+    background-color: #fec349;
+}
+
+#paypal:hover {
+    background-color: #e5b042;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #9000ba;
+    border-color: #9000ba;
+}
+
+/* GENERAL HERO CLASS */
+.hero-image {
+    display: table;
+    width: 100%;
+}
+
+/* Main (Home) Hero section */
+
+#hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('/wp-content/themes/underscores/assets/img/hero-background.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/themes/underscores/assets/img/hero-background.jpeg');
+    /*background: url('/wp-content/themes/underscores/assets/img/hero-background.jpeg') 100% 0 repeat fixed;*/
+    background-size: cover;
+    /*background-position: fixed;*/
+    background-repeat: repeat;
+    min-height: 400px;
+    margin-top: 56px;
+    padding: 100px 0;
+    text-rendering: optimizeLegibility;
+    color: white;
+}
+
+#hero .hero-text {
+    text-align: center;
+}
+
+
+/* === Layout === */
+
+.row + .row {
+    margin-top: 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    margin: 20px 0 40px;
+}
+
+section h3 {
+    margin: 30px 0 10px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header img {
+    height: 140px;
+}
+
+/* About Corey */
+
+#corey img {
+    /*margin: 3% 0 0 25%;*/
+    height: 350px;
+    border-radius: 20px;
+}
+
+/* Corey's Videos */ 
+#video {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('/wp-content/themes/underscores/assets/img/marsh-walk.jpeg') no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/themes/underscores/assets/img/marsh-walk.jpeg') no-repeat fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+/* Stats */
+
+#stats {
+    background: #3e4249;
+    color: white;
+    text-align: center;
+}
+
+#stats img {
+    height: 140px;
+}
+
+/* Recipients */
+
+#recipients {
+    text-align: center;
+}
+
+#purple {
+    color: #a700d8;
+}
+
+#recipients img {
+    height: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Follow Us Bar */
+
+#follow {
+    background: #3e4249;
+    padding: 20px 0;
+    color: white;
+    text-rendering: optimizeLegibility;
+    font-size: 1.2em;
+}
+
+#follow p {
+    margin: 7px 0 0 0;
+    text-align: right;
+}
+
+/* FOOTER */
+
+footer {
+    background: #3e4249;
+    color: white;
+    padding: 20px 0 10px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a:link, footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: #a700d8;
+}
+
+/* CUSTOM SPRITE */
+
+i.ci {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: url('/wp-content/themes/underscores/assets/img/icon-sprite-2.png') no-repeat;
+}
+
+.ci.ci-money                    { background-position: 0 0; }
+.ci.ci-years                    { background-position: -80px 0; }
+.ci.ci-schools                  { background-position: -40px 0; }
+.ci.ci-scholarships             { background-position: -120px 0; }
+
+
+/*============= AWARDS PAGE ==============*/
+
+/* awards-hero */
+
+
+
+#awards-hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('/wp-content/themes/underscores/assets/img/paddling.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/themes/underscores/assets/img/paddling.jpeg');
+    /*background: url('/wp-content/themes/underscores/assets/img/hero-background.jpeg') 100% 0 repeat fixed;*/
+    background-size: cover;
+    /*background-position: fixed;*/
+    background-repeat: repeat;
+    min-height: 250px;
+    margin-top: 56px;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    text-rendering: optimizeLegibility;
+}
+
+/* class not working */
+.hero-image-awards {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('/wp-content/themes/underscores/assets/img/paddling.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/themes/underscores/assets/img/paddling.jpeg');
+    /*background: url('/wp-content/themes/underscores/assets/img/hero-background.jpeg') 100% 0 repeat fixed;*/
+    background-size: cover;
+    /*background-position: fixed;*/
+    background-repeat: repeat;
+    min-height: 250px;
+    margin-top: 56px;
+    padding: 100px 0;
+}
+
+#awards-hero .hero-text {
+    text-align: center;
+}
+
+/*
+.hero-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    text-rendering: optimizeLegibility;
+}
+*/
+
+#awards {
+    text-align: center;
+}
+
+.recipient {
+    margin-bottom: 60px;
+}
+
+.recipient img {
+    height: 250px;
+    border-radius: 30%;
+}
+
+
+/* === CONTACT PAGE === */
+
+input[type="submit"],
+button[type="submit"] {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.33;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: none;
+    border-radius: 6px;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    outline: none;
+    border: none;
+    background: #aaa;
+}
+
+
+
+/* === MEDIA QUERIES === */
+
+@media screen and ( max-width : 991px ) {
+    
+    #recipients img {
+        height: 200px;
+        border-radius: 10%;
+    }
+    
+    .recipient img {
+        height: 200px;
+    }
+    
+}
+
+@media screen and ( max-width: 782px ) {
+    
+    .logged-in .fixed-top {
+        top: 46px;
+    }
+    
+}
+
+/* ipad */
+@media screen and ( max-width : 768px ) {
+    
+    #video iframe {
+        height: 240px;
+    }
+    
+    #recipients img {
+        height: 150px;
+        border-radius: 10%;
+    }
+    
+    #corey img {
+        /*margin: 3% 0 0 25%;*/
+        height: 280px;
+        border-radius: 20px;
+    }
+    
+}
+
+@media screen and ( max-width : 600px ) {
+    
+    .logged-in .fixed-top {
+        top: 42px;
+    }
+    
+}
+
+/* iphone */
+@media screen and ( max-width : 568px ) {
+    
+    #recipients img {
+        height: 200px;
+        border-radius: 10%;
+    }
+    
+}
+
+

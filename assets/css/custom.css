@@ -1,0 +1,239 @@
+/* COLOR REFERENCES 
+PURPLE: #a700d8
+
+*/
+
+/* == GENERAL == */
+
+body {
+    font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+    font-size: 16px;
+    background: url('../other-img/tile.jpg') top left repeat;
+}
+
+/* GLOBAL */
+
+h1,h2,h3,h4,h5,h6 {
+    text-rendering: optimizeLegibility;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h1,h2 {
+    margin: 0 0 40px;
+}
+
+h3 {
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+p.lead {
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #a700d8; 
+}
+
+button, input, .btn, a.btn {
+    text-rendering: optimizeLegibility;
+    color: white;
+    background-color: #a700d8;
+    border: #a700d8;
+
+}
+
+.btn {
+    font-weight: bold;
+}
+
+/* Hero section */
+
+#hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('../img/hero-background.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/hero-background.jpeg');
+    /*background: url('../img/hero-background.jpeg') 100% 0 repeat fixed;*/
+    background-size: cover;
+    /*background-position: fixed;*/
+    background-repeat: repeat;
+    min-height: 400px;
+    margin-top: 56px;
+    padding: 100px 0;
+    text-rendering: optimizeLegibility;
+    color: white;
+}
+
+#hero .hero-text {
+    text-align: center;
+}
+
+
+/* === Layout === */
+
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    margin: 20px 0 40px;
+}
+
+section h3 {
+    margin: 30px 0 10px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header img {
+    height: 140px;
+}
+
+/* About Corey */
+
+#corey img {
+    /*margin: 3% 0 0 25%;*/
+    height: 350px;
+    border-radius: 20px;
+}
+
+/* Corey's Videos */ 
+#video {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/marsh-walk.jpeg) no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/marsh-walk.jpeg) no-repeat fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+/* Stats */
+
+#stats {
+    background: #3e4249;
+    color: white;
+    text-align: center;
+}
+
+#stats img {
+    height: 140px;
+}
+
+/* Recipients */
+
+#recipients {
+    text-align: center;
+}
+
+#purple {
+    color: #a700d8;
+}
+
+#recipients img {
+    height: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Follow Us Bar */
+
+#follow {
+    background: #3e4249;
+    padding: 20px 0;
+    color: white;
+    text-rendering: optimizeLegibility;
+    font-size: 1.2em;
+}
+
+#follow p {
+    margin: 7px 0 0 0;
+    text-align: right;
+}
+
+/* FOOTER */
+
+footer {
+    background: #3e4249;
+    color: white;
+    padding: 20px 0 10px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a:link, footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: #a700d8;
+}
+
+/* CUSTOM SPRITE */
+
+i.ci {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: url('../img/icon-sprite-2.png') no-repeat;
+}
+
+.ci.ci-money                    { background-position: 0 0; }
+.ci.ci-years                    { background-position: -80px 0; }
+.ci.ci-schools                  { background-position: -40px 0; }
+.ci.ci-scholarships             { background-position: -120px 0; }
+
+
+/*==== AWARDS PAGE ====*/
+
+/* awards-hero */
+
+#awards-hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('../img/paddling.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/paddling.jpeg');
+    /*background: url('../img/hero-background.jpeg') 100% 0 repeat fixed;*/
+    background-size: cover;
+    /*background-position: fixed;*/
+    background-repeat: repeat;
+    min-height: 250px;
+    margin-top: 56px;
+    padding: 100px 0;
+    text-rendering: optimizeLegibility;
+    color: white;
+}
+
+#awards-hero .hero-text {
+    text-align: center;
+}
+
+#awards {
+    text-align: center;
+}
+
+.recipient {
+    margin-bottom: 60px;
+}
+
+.recipient img {
+    height: 250px;
+    border-radius: 30%;
+}
+
+
+
